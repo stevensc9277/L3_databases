@@ -6,6 +6,13 @@ session_start();
 include("config.php");
 include("functions.php");
 
+// Connect to database...
+$dbconnect=mysqli_connect(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
+
+if(mysqli_connect_errno()){
+    echo "Connection failed:".mysqli_connect_error();
+    exit;
+}
 ?>
 
 
@@ -22,7 +29,7 @@ include("functions.php");
         <div class="box banner">
             
     
-            <h1>Quick Quotes</h1>
+            <h1><a href="index.php">Quick Quotes</a></h1>
         </div>    <!-- / banner -->
 
        
@@ -35,7 +42,7 @@ include("functions.php");
             
             else{
                 //prevents users from navigating through file system
-                $page=breg_replace('?[^0-9a-zA-Z]-/', '', $_REQUEST['page']);
+                $page=preg_replace('/[^0-9a-zA-Z]-/', '', $_REQUEST['page']);
                 include("content/$page.php");
             } // end of else that includes requested content
             
