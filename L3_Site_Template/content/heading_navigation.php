@@ -3,7 +3,7 @@
     
     <div class="linkwrapper">
         <div class="commonsearches">
-            <a href="#l">All</a> | 
+            <a href="index.php?page=showall">All</a> | 
             <a href="#">Recent</a> | 
             <a href="#">Random</a> 
         </div>  <!-- / common searches -->
