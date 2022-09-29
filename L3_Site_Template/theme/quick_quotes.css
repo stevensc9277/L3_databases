@@ -140,8 +140,8 @@ a.topnav:hover {color: #707a00; text-decoration: none;}
 
 /* links in page */
 a {font-weight: bold;}
-a:link{color: #cfdfde;} /* soft green */
-a:visited{color: #222;} /* dark grey */
+a:link{color: #111111;} /* soft green */
+a:visited{color: rgb(53, 47, 47);} /* dark grey */
 a:hover{color: #707a00;}    /* Dark Green*/
 
 /* #### Headings / text styling #### */
@@ -189,7 +189,7 @@ form {
 
 
 input[type="submit"]:hover {
-    background-color: #000;
+    background-color: #ffd575;
 }
 
 
@@ -199,14 +199,20 @@ input {
     display: inline-block;
     border: 1px solid #000;
     box-sizing: border-box; 
+    width: 95%;
 }
 
+input.short{
+    width: 100px;
+}
 
 .quicksearch {
     border-radius: 5px 0 0 5px; 
     display: inline-block;
 }
 
+
+/* Results styling, including tags button */
 .results{
     background-color: #f7f7f7;
     border: solid 1px #00c1b4;
@@ -214,4 +220,73 @@ input {
 
     margin-right: 20px;
     border-radius: 20px;
+}
+
+.tag {
+    background-color: bisque;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: solid 1px #000;
+    border-radius: 5px;
+}
+
+.about{
+    background-color: bisque;
+    border: solid 1px #d37000;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.error{
+    background-color: #ffcece;
+    color: #721a1a;
+    border-radius: 10px;
+    padding: 10px;
+    border: solid 1px #721a1a;
+}
+
+/* form formatting css */
+
+/* make height of drop downs slightly larger */
+select{
+    height: 40px;
+    padding: 5px;
+}
+
+/* controls input field on autocomplete boxes (pink for an error, white for OK) */
+input.tag-error[type=text]{
+    background-color: #ff9e9e;
+}
+
+input.tag-ok[type=text]{
+    background-color: #fff;
+}
+
+/* field backgrounds */
+.form-ok{
+    background-color: #fff;
+}
+
+.form-error{
+    background-color: #ff9e9e;
+}
+
+.no-error{
+    display: none;
+}
+
+.error-text{
+    color:darkred;
+}
+
+textarea,
+input[type=text]{
+    font-family: 'Lato', 'sans-serif';
+    padding: 10px;
+}
+
+textarea{
+    width: 90%;
+    max-width: 700px;
 }
